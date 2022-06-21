@@ -1,6 +1,6 @@
 """
 Proyecto Básico de Python (Piedra, Papel o Tijera).
-Basado en el proyecto de: Kylie Ying (@kylieyying). 
+Basado en el proyecto de: Alberto Zenón Camacho (@alberzenon). 
 Versión en Español con Modificaciones: Estefania Cassingena Navone (@EstefaniaCassN).
 """
 
