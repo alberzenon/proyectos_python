@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar i {
+    margin-right: 5px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    color: red;
+}
+
+/* Estilos para el fondo del formulario de login */
+.login-background {
+    background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpZ2h0JTIwYmFja2dyb3VuZCUyMGZpbG18ZW58MHx8fHwxNjA3MTM3ODg4&ixlib=rb-1.2.1&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la página de libros */
+.books-background {
+    background-image: url('https://images.unsplash.com/photo-1544716278-e513176f20b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpYnJhcnklMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTYwNzE0MDU4Mg&ixlib=rb-1.2.1&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.books-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}

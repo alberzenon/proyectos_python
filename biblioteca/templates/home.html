@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Bienvenido, {{ username }}!</h2>
+<p>Esta es la página principal de la biblioteca.</p>
+
+<p>Tiempo logueado: <span id="time-elapsed">0</span> segundos.</p>
+
+<script>
+    const loginTime = new Date("{{ login_time }}").getTime();
+    const sessionTimeElement = document.getElementById("time-elapsed");
+
+    function updateSessionTime() {
+        const currentTime = new Date().getTime();
+        const elapsedTime = Math.floor((currentTime - loginTime) / 1000);
+        sessionTimeElement.textContent = elapsedTime;
+    }
+
+    setInterval(updateSessionTime, 1000);
+</script>
+{% endblock %}
