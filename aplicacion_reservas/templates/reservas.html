@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Reservas Realizadas</h1>
+    {% if reservas %}
+        <ul>
+            {% for reserva in reservas %}
+            <li>
+                {{ reserva.nombre }} ha reservado {{ reserva.servicio }} el {{ reserva.fecha }} a las {{ reserva.hora }}.
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay reservas realizadas.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Volver a Inicio</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Servicios Disponibles</h1>
+    <ul>
+        {% for servicio in servicios %}
+        <li>
+            {{ servicio.nombre }} ({{ servicio.duracion }} minutos)
+            <a href="{{ url_for('reserva', servicio_id=servicio.id) }}">Reservar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('ver_reservas') }}">Ver Reservas</a>
+{% endblock %}

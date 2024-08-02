@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Reservar {{ servicio.nombre }}</h1>
+    <form method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+        
+        <button type="submit">Reservar</button>
+    </form>
+{% endblock %}
