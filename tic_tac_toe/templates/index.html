@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="scores">
+        <h2>Puntuaciones</h2>
+        <p>Jugador X: <span id="scoreX">{{ scores['X'] }}</span></p>
+        <p>Jugador O: <span id="scoreO">{{ scores['O'] }}</span></p>
+    </div>
+    <div id="board"></div>
+    <button id="reset">Reiniciar Juego</button>
+    <div id="message"></div>
+
+    <script>
+        const boardElement = document.getElementById('board');
+        const resetButton = document.getElementById('reset');
+        let board = [["", "", ""], ["", "", ""], ["", "", ""]];
+        
+        function renderBoard() {
+            boardElement.innerHTML = '';
+            board.forEach((row, rowIndex) => {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'row';
+                row.forEach((cell, colIndex) => {
+                    const cellDiv = document.createElement('div');
+                    cellDiv.className = 'cell';
+                    cellDiv.innerText = cell;
+                    cellDiv.onclick = () => makeMove(rowIndex, colIndex);
+                    rowDiv.appendChild(cellDiv);
+                });
+                boardElement.appendChild(rowDiv);
+            });
+        }
+
+        function makeMove(row, col) {
+            fetch('/move', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ row, col })
+            })
+            .then(response => response.json())
+            .then(data => {
+                board = data.board;
+                renderBoard();
+                if (data.winner) {
+                    document.getElementById('message').innerText = `El ganador es: ${data.winner}`;
+                    document.getElementById('scoreX').innerText = data.scores.X;
+                    document.getElementById('scoreO').innerText = data.scores.O;
+                }
+            });
+        }
+
+        resetButton.onclick = () => {
+            fetch('/reset', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    board = data.board;
+                    document.getElementById('message').innerText = '';
+                    renderBoard();
+                });
+        };
+
+        renderBoard();
+    </script>
+</body>
+</html>
