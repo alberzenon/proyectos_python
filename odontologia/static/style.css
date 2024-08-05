@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.btn-link {
+    color: #007bff;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.rounded {
+    border-radius: 10px !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+footer {
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

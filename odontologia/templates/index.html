@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}Inicio - Clínica Odontológica{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Bienvenido a la Clínica Odontológica</h1>
+    <img src="{{ url_for('static', filename='dentist.jpg') }}" alt="Odontología" class="img-fluid mb-4 rounded shadow">
+</div>
+{% endblock %}
