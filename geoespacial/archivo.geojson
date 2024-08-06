@@ -1,0 +1,61 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.0060, 40.7128]
+        },
+        "properties": {
+          "name": "Nueva York",
+          "population": 8804190
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-118.2437, 34.0522]
+        },
+        "properties": {
+          "name": "Los Ángeles",
+          "population": 3971883
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-87.6298, 41.8781]
+        },
+        "properties": {
+          "name": "Chicago",
+          "population": 2746388
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-95.3698, 29.7604]
+        },
+        "properties": {
+          "name": "Houston",
+          "population": 2304580
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.3321, 47.6062]
+        },
+        "properties": {
+          "name": "Seattle",
+          "population": 724745
+        }
+      }
+    ]
+  }
+  
