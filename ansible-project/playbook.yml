@@ -1,0 +1,4 @@
+---
+- hosts: logstash_hosts
+  tasks:
+    - include_tasks: tasks/delete_logstash_files.yml

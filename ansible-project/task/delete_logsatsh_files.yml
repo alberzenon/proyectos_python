@@ -1,0 +1,37 @@
+---
+- name: Eliminar archivos de /var/lib/logstash/queue/
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - /var/lib/logstash/queue/ospexporter/*
+    - /var/lib/logstash/queue/idp_admin_group/*
+    - /var/lib/logstash/queue/automate/*
+    - /var/lib/logstash/queue/automation/*
+    - /var/lib/logstash/queue/datasql/*
+    - /var/lib/logstash/queue/tech_deployment/*
+    - /var/lib/logstash/queue/connector_elastic/*
+    - /var/lib/logstash/queue/connector_semas/*
+    - /var/lib/logstash/queue/chameleon_semas/*
+    - /var/lib/logstash/queue/middleware/*
+    - /var/lib/logstash/queue/datanosql/*
+    - /var/lib/logstash/queue/apx/*
+    - /var/lib/logstash/queue/networkcontrollerneutron/*
+    - /var/lib/logstash/queue/databasecontrollercore/*
+    - /var/lib/logstash/queue/blockstoragecontroller/*
+    - /var/lib/logstash/queue/networkcontrollerdhcp/*
+    - /var/lib/logstash/queue/databasecontrollermetrics/*
+    - /var/lib/logstash/queue/databasecontrollerneutron/*
+    - /var/lib/logstash/queue/databasecontrollernova/*
+    - /var/lib/logstash/queue/telemetrycontroller/*
+    - /var/lib/logstash/queue/dashboardcontroller/*
+    - /var/lib/logstash/queue/messagingcontrollercore/*
+    - /var/lib/logstash/queue/messagingcontrollermetrics/*
+    - /var/lib/logstash/queue/messagingcontrollerneutron/*
+    - /var/lib/logstash/queue/corecontroller/*
+    - /var/lib/logstash/queue/messagingcontrollernova/*
+    - /var/lib/logstash/queue/novacompute/*
+    - /var/lib/logstash/queue/semaas/*
+    - /var/lib/logstash/queue/monitoring/*
+    - /var/lib/logstash/queue/compute/*
+    - /var/lib/logstash/queue/filebeats/*
